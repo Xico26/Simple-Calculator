@@ -1,0 +1,74 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #708090;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.calculator {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-button {
+    cursor: pointer;
+    font-size: 2rem;    
+    color: white;
+    border: 0.1px solid black;
+    outline: none;
+    background-color: rgb(101, 107, 112);
+}
+
+.calculator-button:hover {
+    background-color: rgba(101, 107, 112, 0.75);
+}
+
+.tools {
+    background-color: rgb(61, 64, 70);
+}
+
+.tools:hover {
+    background-color: rgba(61, 64, 70, 0.75);
+}
+
+.operators, .equals {
+    background-color: #F1A43D;
+}
+
+.operators:hover, .equals:hover {
+    background-color: rgba(255, 149, 0, 0.75);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(50, 57, 64, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previous-num {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.current-num {
+    color: white;
+    font-size: 2.5rem;
+}
